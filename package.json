@@ -11,9 +11,11 @@
     "stylelint": "npx stylelint **/*.{css,vue} --fix"
   },
   "dependencies": {
+    "@googlemaps/js-api-loader": "^1.12.5",
     "echarts": "^5.1.2",
     "element-plus": "^1.1.0-beta.19",
-    "vue": "^3.2.20"
+    "vue": "^3.2.20",
+    "vue3-google-map": "^0.8.2"
   },
   "license": "MIT",
   "repository": "https://github.com/hsiangleev/element-plus-admin",
