@@ -1,31 +1,33 @@
 <template>
-  <div>
-    <GoogleMap
-      api-key="AIzaSyAAAdIjvwLUt30ZN8Q8pOkY1hAPzV3Klgw"
-      style="width: 100%; height: 500px"
-      :center="center"
-      :libraries="['geometry', 'drawing', 'places']"
-      @dragend="getPoint"
-      :zoom="15"
-    >
-      <Marker :options="markerOptions" />
-    </GoogleMap>
-  </div>
+  <div id="map" class="map"></div>
 </template>
 
 <script lang="ts">
 import { defineComponent } from 'vue'
-import { GoogleMap, Marker } from 'vue3-google-map'
+import { Loader, LoaderOptions } from 'google-maps'
+
 export default defineComponent({
-  components: { GoogleMap, Marker },
+  components: {},
   name: 'BudApply',
   setup() {
-    const center = { lat: 40.689247, lng: -74.044502 }
-    const markerOptions = { position: center, label: 'L', title: 'LADY LIBERTY', draggable: true }
-    const getPoint = () => {
-      console.log('111')
+    const options: LoaderOptions = {
+      /* todo */
     }
-    return { center, markerOptions, getPoint }
+    const loader = new Loader('AIzaSyAAAdIjvwLUt30ZN8Q8pOkY1hAPzV3Klgw', options)
+
+    loader.load().then(function (google) {
+      const map = new google.maps.Map(document.getElementById('map'), {
+        center: { lat: -34.397, lng: 150.644 },
+        zoom: 8
+      })
+    })
+    return {}
   }
 })
 </script>
+<style lang="scss" scoped>
+.map {
+  width: 100%;
+  height: 500px;
+}
+</style>

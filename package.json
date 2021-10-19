@@ -11,18 +11,22 @@
     "stylelint": "npx stylelint **/*.{css,vue} --fix"
   },
   "dependencies": {
-    "@googlemaps/js-api-loader": "^1.12.5",
     "echarts": "^5.1.2",
     "element-plus": "^1.1.0-beta.19",
+    "google-maps": "^4.3.3",
+    "js-cookie": "^3.0.1",
+    "makeit-captcha": "^1.2.5",
     "vue": "^3.2.20",
-    "vue3-google-map": "^0.8.2"
+    "vue-i18n": "^9.1.6"
   },
   "license": "MIT",
   "repository": "https://github.com/hsiangleev/element-plus-admin",
   "devDependencies": {
     "@babel/preset-env": "^7.12.11",
     "@testing-library/jest-dom": "^5.11.8",
+    "@types/google.maps": "^3.45.6",
     "@types/jest": "^26.0.20",
+    "@types/js-cookie": "^3.0.0",
     "@types/mockjs": "^1.0.3",
     "@types/node": "^14.14.20",
     "@types/nprogress": "^0.2.0",
@@ -50,6 +54,7 @@
     "postcss-import": "^14.0.0",
     "postcss-nested": "^5.0.3",
     "postcss-simple-vars": "^6.0.2",
+    "sass": "^1.43.2",
     "screenfull": "^5.1.0",
     "stylelint": "^13.8.0",
     "stylelint-config-standard": "^20.0.0",
